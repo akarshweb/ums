@@ -1,0 +1,21 @@
+<div class="user-detail" *ngIf="user">
+  <div class="card">
+    <div class="user-info">
+      <h2>User Details</h2>
+      <p><strong>ID:</strong> {{user.id}}</p>
+      <p><strong>Name:</strong> {{user.name}}</p>
+    </div>
+
+    <!-- Expanded Info (Address & DOB) with Animation -->
+    <div class="additional-info" [ngClass]="{'expanded': showMore}">
+      <ng-container *ngIf="showMore">
+        <p><strong>Address:</strong> {{user.address}}</p>
+        <p><strong>Date of Birth:</strong> {{user.dob | date}}</p>
+      </ng-container>
+    </div>
+
+    <button (click)="toggleShowMore()">
+      {{ showMore ? 'Show Less' : 'Show More' }}
+    </button>
+  </div>
+</div>

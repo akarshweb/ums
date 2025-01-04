@@ -1,0 +1,91 @@
+.user-list {
+  // General layout of the user list page
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background-color, #f4f4f4);
+
+  // Title of the page
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+
+  // Styling the Syncfusion grid
+  .e-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+
+    // Grid header styling
+    .e-gridheader {
+      background-color: var(--primary-bg, #007bff);
+      color: #fff;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 10px 15px;
+    }
+
+    // Row hover effect for interaction feedback
+    .e-row:hover {
+      background-color: var(--accent-color, #e7f1ff);
+      cursor: pointer;
+    }
+
+    // Column header styles (making them bold)
+    .e-columnheader {
+      font-weight: 600;
+    }
+
+    // Grid cell styling to resemble a table
+    .e-rowcell {
+      padding: 12px;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+      border-bottom: 1px solid #f1f1f1;
+
+      // Even row styling for a striped effect
+      &:nth-child(even) {
+        background-color: #fafafa;
+      }
+    }
+
+    // Grid row styling for better alignment
+    .e-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      // Add spacing between the columns
+      .e-rowcell {
+        padding: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    // Responsive handling for smaller screens
+    @media (max-width: 768px) {
+      .e-grid {
+        padding: 0 10px;
+        margin-top: 20px;
+      }
+
+      .e-columnheader, .e-rowcell {
+        font-size: 0.9rem;
+      }
+      
+    }
+  }
+}

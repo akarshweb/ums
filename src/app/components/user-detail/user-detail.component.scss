@@ -1,0 +1,51 @@
+.user-detail {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .user-info {
+    margin-bottom: 20px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .extra-info {
+    margin-top: 20px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .additional-info {
+    overflow: hidden;
+    height: 0; // Ensures it's hidden by default (collapsed state)
+    opacity: 0; // Makes it invisible in the collapsed state
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &.expanded {
+      height: auto; // Let the content define the height when expanded
+      opacity: 1; // Makes it visible when expanded
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--accent-color);
+    }
+  }
+}

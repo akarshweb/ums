@@ -15,9 +15,11 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
 
     &:hover {
-      background-color: var(--accent-color);
+      background-color: var(--accent-color); /* Ensure hover background color is visible */
+      color: var(--text-color); /* Ensure text is always readable */
     }
   }
 }

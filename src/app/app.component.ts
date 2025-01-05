@@ -2,63 +2,74 @@ import { Component } from '@angular/core';
 import { enableRipple } from '@syncfusion/ej2-base';
 import { MenuItemModel } from '@syncfusion/ej2-angular-navigations';
 import { MenuModule } from '@syncfusion/ej2-angular-navigations';
-import { RouterModule } from '@angular/router';  // Import RouterModule
+import { RouterModule } from '@angular/router';
+import { ThemeService } from './services/theme.service';  // Import ThemeService
 
 enableRipple(true);
 
 @Component({
   selector: 'app-root',
   template: `
-    <div class="menu-container">
-      <!-- Render Vertical Menu -->
-      <ejs-menu [items]='menuItems' orientation="Vertical"></ejs-menu>
+    <div class="app-layout">
+      <div class="menu-container">
+        <ejs-menu [items]='menuItems' orientation="Vertical" cssClass="custom-menu"></ejs-menu>
+      </div>
+      <div class="content-container">
+        <router-outlet></router-outlet>
+      </div>
     </div>
-    <h1>Hello, {{ title }}</h1>
-    <router-outlet></router-outlet> <!-- Ensure router outlet is placed correctly -->
   `,
   styles: [
     `
+      .app-layout {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
       .menu-container {
-        width: 250px;
+        width: 120px;
         height: 100%;
         border-right: 1px solid var(--border-color);
+        background-color: var(--background-color);
+
+        /* Add these styles for the menu items */
+        ::ng-deep .e-menu-container .e-menu-item {
+          width: 100%;
+          padding: 12px 15px;
+        }
+
+        ::ng-deep .e-menu-wrapper ul.e-menu {
+          width: 100%;
+        }
+
+        ::ng-deep .e-menu-wrapper ul.e-vertical {
+          width: 100%;
+        }
+      }
+
+      .content-container {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
         background-color: var(--background-color);
       }
     `
   ],
-  imports: [MenuModule, RouterModule], // Make sure RouterModule is imported here
+  imports: [MenuModule, RouterModule],
 })
 export class AppComponent {
-  title = 'user-management-system'; // Define the title property here
+
+  title = 'user-management-system';
 
   public menuItems: MenuItemModel[] = [
-    {
-      text: 'Home',
-      items: [
-        {
-          text: 'Go to Home',
-          url: '/home', // Use routerLink
-        }
-      ]
-    },
-    {
-      text: 'User List',
-      items: [
-        {
-          text: 'View Users',
-          url: '/user-list', // Use routerLink
-        }
-      ]
-    },
-    {
-      text: 'Create User',
-      items: [
-        {
-          text: 'Create New User',
-          url: '/user-create', // Use routerLink
-        }
-      ]
-    },
-    // Add more menu items as needed
+    { text: 'Home', url: '/home' },
+    { text: 'User List', url: '/user-list' },
+    { text: 'Create User', url: '/user-create' },
   ];
+
+  constructor(private themeService: ThemeService) {
+    // Apply theme on initialization
+    this.themeService.applyTheme();
+  }
 }

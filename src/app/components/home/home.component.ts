@@ -11,15 +11,6 @@ import { ThemeService } from '../../services/theme.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  menuItems = [
-    {
-      text: 'User Management',
-      items: [
-        { text: 'User List', url: '/user-list' },
-        { text: 'Create User', url: '/user-create' },
-      ],
-    },
-  ];
 
   constructor(private themeService: ThemeService) {}
 

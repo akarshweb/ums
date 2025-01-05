@@ -1,3 +1,4 @@
+<!-- user-detail.component.html -->
 <div class="user-detail" *ngIf="user">
   <div class="card">
     <div class="user-info">
@@ -6,15 +7,17 @@
       <p><strong>Name:</strong> {{user.name}}</p>
     </div>
 
-    <!-- Expanded Info (Address & DOB) with Animation -->
-    <div class="additional-info" [ngClass]="{'expanded': showMore}">
-      <ng-container *ngIf="showMore">
+    <div [@detailExpand]="showMore ? 'expanded' : 'collapsed'" class="additional-info">
+      <div class="info-content">
         <p><strong>Address:</strong> {{user.address}}</p>
         <p><strong>Date of Birth:</strong> {{user.dob | date}}</p>
-      </ng-container>
+      </div>
     </div>
 
-    <button (click)="toggleShowMore()">
+    <button
+      (click)="toggleShowMore()"
+      [@buttonRipple]="buttonClicked"
+      class="toggle-button">
       {{ showMore ? 'Show Less' : 'Show More' }}
     </button>
   </div>

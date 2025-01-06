@@ -10,7 +10,7 @@
 
   .user-form {
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
 
       label {
         display: block;
@@ -21,13 +21,13 @@
       ejs-datepicker {
         width: 100%;
         padding: 8px;
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
+        border: 3px solid var(--border-color);
+        border-radius: 8px;
       }
 
       /* Additional specific style for ejs-datepicker input */
       ejs-datepicker input {
-        width: 100%;
+        width: 1000%;
         padding: 8px;
         border: 1px solid var(--border-color);
         border-radius: 4px;

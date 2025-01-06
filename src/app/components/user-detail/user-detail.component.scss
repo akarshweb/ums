@@ -2,8 +2,9 @@
 .user-detail {
   .card {
     position: relative;
-    padding: 20px;
-    border-radius: 8px;
+    margin-top: 50px;
+    padding: 70px;
+    border-radius: 28px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--background-color);
     transition: box-shadow 0.3s ease;
@@ -19,7 +20,7 @@
 
   .additional-info {
     .info-content {
-      padding: 10px;
+      padding: 20px;
       border-left: 3px solid var(--primary-color);
       margin: 10px 0;
       background-color: rgba(var(--primary-color-rgb), 0.05);
@@ -34,7 +35,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
       background-color: var(--accent-color);

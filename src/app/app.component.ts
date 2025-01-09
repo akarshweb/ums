@@ -26,7 +26,7 @@ export class AppComponent {
 
   menuVisible = true;
 
-  constructor(private themeService: ThemeService) {
+  constructor(public themeService: ThemeService) {
     this.themeService.applyTheme();
   }
 

@@ -87,3 +87,25 @@ ejs-menu.e-vertical .e-menu-item.e-selected {
 ejs-menu.e-vertical .e-menu-icon {
   display: none;
 }
+.theme-toggle-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-toggle-btn {
+  background: white;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgb(121, 42, 166);
+}

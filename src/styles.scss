@@ -1,26 +1,25 @@
-
-/* You can add global styles to this file, and also import other style files */
-
 /* Light theme (default) */
+
 body.light-theme {
-  --primary-color: #007bff;
+  --primary-color: #8837c6;
   --accent-color: #6c757d;
   --background-color: #ffffff;
   --text-color: #333333;
   --border-color: #dee2e6;
-  --primary-bg: #f8f9fa;
+  --primary-bg: #f8f9fa;;
 }
 
 /* Dark theme */
+
 body.dark-theme {
-  --primary-color: #0d6efd;
+  --primary-color: #bb7ee7;
   --accent-color: #495057;
   --background-color: #212529;
   --text-color: #f8f9fa;
   --border-color: #495057;
   --primary-bg: #343a40;
+  
 }
-
 
 body {
   margin: 0;
@@ -30,6 +29,7 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 // Global styles for forms
 form {
@@ -83,3 +83,5 @@ form {
     cursor: pointer;
   }
 }
+
+

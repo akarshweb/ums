@@ -14,15 +14,15 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 120px; /* Adjusted width of the sidebar */
-  background-color: var(--background-color);
+  width: 120px;
+  background-color: white;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   z-index: 999;
+  transition: transform 0.3s ease-in-out;
 }
 
 .menu-container.hidden {
-  transform: translateX(-120px); /* Move the menu out of view when hidden */
+  transform: translateX(-120px);
 }
 
 .content-container {
@@ -30,16 +30,21 @@ body {
   padding: 20px;
   overflow-y: auto;
   background-color: var(--background-color);
+  transition: margin-left 0.3s ease-in-out;
 }
 
-/* Menu toggle button for opening and closing */
+/* Shift content to the right when the menu is open */
+.content-container.shifted {
+  margin-left: 120px; /* This should match the width of the menu */
+}
+
 .menu-toggle-btn {
   position: fixed;
   top: 10px;
-  left: 10px; /* Fix the button near the left of the menu */
-  z-index: 1000; /* Ensure the toggle button is above the menu */
-  background: var(--primary-color); /* Initial background color */
-  color: white; /* White text */
+  left: 10px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: white;
   border: none;
   border-radius: 4px;
   padding: 6px 12px;
@@ -48,40 +53,37 @@ body {
 }
 
 .menu-toggle-btn:hover {
-  background-color: grey; /* Hover color */
+  background-color: grey;
 }
 
-/* Styling for menu items (Home, User List, etc.) */
+/* Menu item styles */
 ejs-menu.e-vertical .e-menu-item {
   display: flex;
   align-items: center;
-  justify-content: start; /* Align text to the left */
+  justify-content: start;
   width: 100%;
-  padding: 15px; /* Padding around the text */
-  margin: 10px 0; /* Space between items */
-  background-color: white; /* White background */
-  color: var(--primary-color); /* Text color */
-  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  margin: 10px 0;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* On hover, change background color */
 ejs-menu.e-vertical .e-menu-item:hover {
   background-color: var(--primary-color);
   color: white;
-  transform: scale(1.05); /* Slightly enlarge the item */
+  transform: scale(1.05);
 }
 
-/* Active (selected) item */
 ejs-menu.e-vertical .e-menu-item.e-selected {
-  background-color: var(--primary-color); /* Background for selected item */
-  color: white; /* Text color for selected item */
-  font-weight: bold; /* Bold the text */
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
 }
 
-/* Optional: Hide menu icons */
 ejs-menu.e-vertical .e-menu-icon {
   display: none;
 }

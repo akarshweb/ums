@@ -1,18 +1,16 @@
 <div class="app-layout">
-  <button
-    class="menu-toggle-btn"
-    [style.left]="menuVisible ? '130px' : '10px'"
-    (click)="toggleMenu()"
-  >
-    <span *ngIf="menuVisible">☰</span>
-    <span *ngIf="!menuVisible">☰</span>
-  </button>
-
+  <!-- Sidebar Menu -->
   <div class="menu-container" [class.hidden]="!menuVisible">
     <ejs-menu [items]="menuItems" orientation="Vertical" cssClass="custom-menu"></ejs-menu>
   </div>
 
-  <div class="content-container">
+  <!-- Main Content -->
+  <div class="content-container" [class.shifted]="menuVisible">
     <router-outlet></router-outlet>
   </div>
+
+  <!-- Toggle Button -->
+  <button class="menu-toggle-btn" [style.left]="getToggleButtonLeftPosition()" (click)="toggleMenu()">
+    ☰
+  </button>
 </div>

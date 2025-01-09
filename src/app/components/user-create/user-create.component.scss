@@ -23,14 +23,17 @@
         padding: 8px;
         border: 3px solid var(--border-color);
         border-radius: 8px;
+        background-color: var(--background-color);
+        color: var(--text-color);
       }
 
-      /* Additional specific style for ejs-datepicker input */
+      /* Specifically style the ejs-datepicker input */
       ejs-datepicker input {
-        width: 1000%;
         padding: 8px;
         border: 1px solid var(--border-color);
         border-radius: 4px;
+        background-color: var(--background-color); /* Ensure same background as other inputs */
+        color: var(--text-color); /* Text color that matches the theme */
       }
 
       /* Error message styling */

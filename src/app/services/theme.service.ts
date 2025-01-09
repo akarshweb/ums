@@ -1,34 +1,31 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';  // Import BehaviorSubject
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ThemeService {
   private isDarkTheme = new BehaviorSubject<boolean>(this.getStoredTheme());
-  isDarkTheme$ = this.isDarkTheme.asObservable();
 
   constructor() {
-    this.applyTheme(); // Apply theme on service initialization
-  }
-
-  toggleTheme(): void {
-    const newTheme = !this.isDarkTheme.value;
-    this.isDarkTheme.next(newTheme);  // Update the theme state
-    this.applyTheme();  // Apply the theme
-    this.storeTheme(newTheme);  // Persist the theme in localStorage
+    this.applyTheme();
   }
 
   private getStoredTheme(): boolean {
     const storedTheme = localStorage.getItem('theme');
-    return storedTheme === 'dark'; // Default to light theme if no value is found
+    return storedTheme === 'dark';
   }
 
   private storeTheme(isDark: boolean): void {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 
-  // Make the method public so it can be accessed from AppComponent
+  public toggleTheme(): void {
+    this.isDarkTheme.next(!this.isDarkTheme.value);
+    this.storeTheme(this.isDarkTheme.value);
+    this.applyTheme();
+  }
+
   public applyTheme(): void {
     const isDark = this.isDarkTheme.value;
     const body = document.body;
@@ -40,5 +37,11 @@ export class ThemeService {
       body.classList.add('light-theme');
       body.classList.remove('dark-theme');
     }
+
+    // Allow time for background image to load
+    body.style.opacity = '0';
+    setTimeout(() => {
+      body.style.opacity = '1';
+    }, 200);
   }
 }

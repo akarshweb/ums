@@ -1,29 +1,17 @@
 <div class="app-layout">
+  <!-- Sidebar Menu -->
   <div class="menu-container" [class.hidden]="!menuVisible">
-    <ejs-menu
-      [items]="menuItems"
-      orientation="Vertical"
-      cssClass="custom-menu"
-    ></ejs-menu>
-    <!-- Theme Toggle Button -->
+    <ejs-menu [items]="menuItems" orientation="Vertical" cssClass="custom-menu"></ejs-menu>
     <div class="theme-toggle-container">
-      <button
-        class="theme-toggle-btn"
-        (click)="themeService.toggleTheme()"
-      >
-      💡
-      </button>
+      <button class="theme-toggle-btn" (click)="themeService.toggleTheme()">💡</button>
     </div>
   </div>
 
-
-  <!-- Main Content -->
+  <!-- Main Content Area -->
   <div class="content-container" [class.shifted]="menuVisible">
     <router-outlet></router-outlet>
   </div>
 
-  <!-- Toggle Button -->
-  <button class="menu-toggle-btn" [style.left]="getToggleButtonLeftPosition()" (click)="toggleMenu()">
-    ☰
-  </button>
+  <!-- Sidebar Toggle Button -->
+  <button class="menu-toggle-btn" [style.left]="getToggleButtonLeftPosition()" (click)="toggleMenu()">☰</button>
 </div>

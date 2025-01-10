@@ -1,16 +1,14 @@
-/* Light theme (default) */
-
+// Light Theme Variables
 body.light-theme {
   --primary-color: #8837c6;
   --accent-color: #6c757d;
   --background-color: #ffffff;
   --text-color: #333333;
   --border-color: #dee2e6;
-  --primary-bg: #f8f9fa;;
+  --primary-bg: #f8f9fa;
 }
 
-/* Dark theme */
-
+// Dark Theme Variables
 body.dark-theme {
   --primary-color: #bb7ee7;
   --accent-color: #495057;
@@ -18,70 +16,14 @@ body.dark-theme {
   --text-color: #f8f9fa;
   --border-color: #495057;
   --primary-bg: #343a40;
-  
 }
 
+// Global Body Styles
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
-
-
-// Global styles for forms
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-
-  div {
-    margin-bottom: 15px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-
-  button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-}
-
-// Grid styles
-.e-grid {
-  background-color: var(--background-color);
-  color: var(--text-color);
-
-  .e-gridheader {
-    background-color: var(--primary-bg);
-  }
-
-  .e-row:hover {
-    background-color: var(--accent-color);
-    cursor: pointer;
-  }
-}
-
-

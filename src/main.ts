@@ -8,6 +8,5 @@ registerLicense('ORg4AjUWIQA/Gnt2XVhhQlJHfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hTH5
 
 // Bootstrap the Angular application
 bootstrapApplication(AppComponent, appConfig)
-  .catch(err => console.error(err));
-
-  
+  .then(() => console.log('Application bootstrapped successfully'))
+  .catch(err => console.error('Application bootstrap failed:', err));

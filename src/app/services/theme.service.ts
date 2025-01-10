@@ -37,11 +37,5 @@ export class ThemeService {
       body.classList.add('light-theme');
       body.classList.remove('dark-theme');
     }
-
-    // Allow time for background image to load
-    body.style.opacity = '0';
-    setTimeout(() => {
-      body.style.opacity = '1';
-    }, 200);
   }
 }

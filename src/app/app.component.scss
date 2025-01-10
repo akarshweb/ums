@@ -56,37 +56,6 @@ body {
   background-color: grey;
 }
 
-/* Menu item styles */
-ejs-menu.e-vertical .e-menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  background-color: white;
-  color: var(--primary-color);
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-ejs-menu.e-vertical .e-menu-item:hover {
-  background-color: var(--primary-color);
-  color: white;
-  transform: scale(1.05);
-}
-
-ejs-menu.e-vertical .e-menu-item.e-selected {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-}
-
-ejs-menu.e-vertical .e-menu-icon {
-  display: none;
-}
 .theme-toggle-container {
   position: absolute;
   bottom: 20px;

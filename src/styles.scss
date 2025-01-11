@@ -1,4 +1,4 @@
-// Light Theme Variables
+/* Light Theme Variables */
 body.light-theme {
   --primary-color: #8837c6;
   --accent-color: #6c757d;
@@ -8,14 +8,14 @@ body.light-theme {
   --primary-bg: #f8f9fa;
 }
 
-// Dark Theme Variables
+/* Dark Theme Variables */
 body.dark-theme {
   --primary-color: #bb7ee7;
   --accent-color: #495057;
-  --background-color: #212529;
+  --background-color: #343a40; /* Updated to a darker shade for better contrast */
   --text-color: #f8f9fa;
   --border-color: #495057;
-  --primary-bg: #343a40;
+  --primary-bg: #212529; /* Updated to a darker shade for better contrast */
 }
 
 // Global Body Styles
@@ -27,3 +27,5 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
+
+

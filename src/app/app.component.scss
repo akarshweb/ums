@@ -15,10 +15,80 @@ body {
   left: 0;
   height: 100%;
   width: 120px;
-  background-color: white;
+  background-color: var(--background-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+
+  :host-context(body.dark-theme) & {
+    background-color: #2a2d31;
+  }
+
+  .e-menu-wrapper {
+    flex: 1;
+    background-color: inherit;
+
+    :host-context(body.dark-theme) & {
+      background-color: inherit;
+    }
+  }
+}
+
+:host ::ng-deep .e-menu-wrapper {
+  .e-menu {
+    background-color: inherit;
+  }
+
+  .e-menu-item {
+    background-color: inherit !important;
+    transition: background-color 0.3s ease !important;
+
+    .e-menu-text {
+      color: var(--text-color) !important;
+    }
+
+    /* Hover effect for both themes */
+    &:hover {
+      background-color: var(--accent-color) !important;
+      cursor: pointer;
+    }
+
+    /* Dark theme specific styles */
+    :host-context(body.dark-theme) & {
+      background-color: inherit !important;
+
+      .e-menu-text {
+        color: white !important;
+      }
+
+      &:hover {
+        background-color: var(--accent-color) !important; /* Accent color on hover */
+        .e-menu-text {
+          color: white !important; /* Text remains white */
+        }
+      }
+    }
+
+    /* Light theme specific styles */
+    :host-context(body.light-theme) & {
+      &:hover {
+        background-color: var(--accent-color) !important; /* Accent color on hover */
+        .e-menu-text {
+          color: white !important; /* Text remains white */
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .e-menu-item.e-focused {
+  background-color: var(--accent-color) !important;
+
+  .e-menu-text {
+    color: white !important;
+  }
 }
 
 .menu-container.hidden {
@@ -33,9 +103,8 @@ body {
   transition: margin-left 0.3s ease-in-out;
 }
 
-/* Shift content to the right when the menu is open */
 .content-container.shifted {
-  margin-left: 120px; /* This should match the width of the menu */
+  margin-left: 120px;
 }
 
 .menu-toggle-btn {
@@ -50,10 +119,10 @@ body {
   padding: 6px 12px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
 
-.menu-toggle-btn:hover {
-  background-color: grey;
+  &:hover {
+    background-color: grey;
+  }
 }
 
 .theme-toggle-container {
@@ -70,11 +139,22 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 3px 6px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(121, 42, 166);
+  }
 }
 
-.theme-toggle-btn:hover {
-  background-color: rgb(121, 42, 166);
+
+// Vertical Menu specific styles
+:host ::ng-deep .vertical-menu {
+  width: 100%;
+
+  .e-menu-container {
+    background-color: inherit;
+  }
 }
+

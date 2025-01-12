@@ -1,24 +1,34 @@
 /* Light Theme Variables */
 body.light-theme {
   --primary-color: #8837c6;
-  --accent-color: #6c757d;
+  --accent-color: #b38cd8;
   --background-color: #ffffff;
   --text-color: #333333;
   --border-color: #dee2e6;
-  --primary-bg: #f8f9fa;
+  --grid-background: #ffffff;
+  --grid-text-color: #8837c6;
+  --grid-border-color: #ddd;
+  --grid-hover-color: #e7f1ff;
+  --grid-even-row-color: #c05e5e;
+
 }
 
 /* Dark Theme Variables */
 body.dark-theme {
   --primary-color: #bb7ee7;
   --accent-color: #495057;
-  --background-color: #343a40; /* Updated to a darker shade for better contrast */
+  --background-color: #212529;
   --text-color: #f8f9fa;
   --border-color: #495057;
-  --primary-bg: #212529; /* Updated to a darker shade for better contrast */
+  --menu-background: #2a2d31; // Add this new variable
+  --grid-background: #2c3034;
+  --grid-text-color: #f8f9fa;
+  --grid-border-color: #495057;
+  --grid-hover-color: #3a3f44;
+  --grid-even-row-color: #343a40;
 }
 
-// Global Body Styles
+/* Global Body Styles */
 body {
   margin: 0;
   padding: 0;

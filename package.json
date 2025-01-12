@@ -20,7 +20,7 @@
     "@angular/router": "^19.0.0",
     "@syncfusion/ej2-angular-base": "^28.1.33",
     "@syncfusion/ej2-angular-calendars": "^28.1.37",
-    "@syncfusion/ej2-angular-grids": "^28.1.37",
+    "@syncfusion/ej2-angular-grids": "^28.1.38",
     "@syncfusion/ej2-angular-navigations": "^28.1.37",
     "@syncfusion/ej2-base": "^28.1.33",
     "rxjs": "~7.8.0",

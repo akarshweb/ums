@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  private isDarkTheme = new BehaviorSubject<boolean>(this.getStoredTheme());
+  private _isDarkTheme = new BehaviorSubject<boolean>(this.getStoredTheme());
+
+  get isDarkTheme$(): Observable<boolean> {
+    return this._isDarkTheme.asObservable();
+  }
+
+  get isDark(): boolean {
+    return this._isDarkTheme.value;
+  }
 
   constructor() {
     this.applyTheme();
@@ -21,13 +29,13 @@ export class ThemeService {
   }
 
   public toggleTheme(): void {
-    this.isDarkTheme.next(!this.isDarkTheme.value);
-    this.storeTheme(this.isDarkTheme.value);
+    this._isDarkTheme.next(!this._isDarkTheme.value);
+    this.storeTheme(this._isDarkTheme.value);
     this.applyTheme();
   }
 
   public applyTheme(): void {
-    const isDark = this.isDarkTheme.value;
+    const isDark = this._isDarkTheme.value;
     const body = document.body;
 
     if (isDark) {

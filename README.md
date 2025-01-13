@@ -16,6 +16,8 @@
 13. [Future Improvements](#-future-improvements)
 14. [Contributing](#-contributing)
 15. [License](#-license)
+16. [Authors](#authors)
+17. [Acknowledgments](#acknowledgments)
 
 ## 🎥 Project Demo
 Here's a quick demonstration of the key features:
@@ -198,6 +200,45 @@ Before starting the installation, ensure you have the following installed on you
    ng build --configuration=production
    ```
 
+## 📁 File Structure
+
+```
+user-management-system/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── home/
+│   │   │   ├── user-create/
+│   │   │   ├── user-detail/
+│   │   │   └── user-list/
+│   │   ├── services/
+│   │   │   ├── theme.service.ts
+│   │   │   └── user.service.ts
+│   │   └── [app configuration files]
+│   └── [other source files]
+├── angular.json
+├── package.json
+└── [configuration files]
+```   
+
+
+## 📝 Usage Guide
+
+### Creating a New User
+1. Click "Create User" in sidebar
+2. Fill in required fields:
+   - Name (letters only, 3-30 characters)
+   - Address (10-40 characters)
+   - Date of Birth
+3. Submit form
+
+### Managing Users
+1. View user list in grid
+2. Use search bar for filtering
+3. Click row for detailed view
+4. Toggle theme using theme button
+
+
 ## 🔍 Special Features
 
 ### Advanced Search Implementation
@@ -260,21 +301,13 @@ applySearch() {
 - Custom theme creator
 - Data import/export
 
-## 📝 Usage Guide
+## 🤝 Contributing
 
-### Creating a New User
-1. Click "Create User" in sidebar
-2. Fill in required fields:
-   - Name (letters only, 3-30 characters)
-   - Address (10-40 characters)
-   - Date of Birth
-3. Submit form
-
-### Managing Users
-1. View user list in grid
-2. Use search bar for filtering
-3. Click row for detailed view
-4. Toggle theme using theme button
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
@@ -283,3 +316,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Note**: For any issues or questions, please create a new issue in the repository or contact the maintainers.
+
+
+## 👥 Authors
+
+Akarsh R - Initial work - [@akarshweb](https://github.com/akarshweb)
+
+
+## 🙏 Acknowledgments
+
+Syncfusion for their excellent UI components
+Angular team for the fantastic framework
+The open-source community
+
+
+Note: This project is part of a learning initiative and is continuously being improved. Feedback and contributions are welcome!

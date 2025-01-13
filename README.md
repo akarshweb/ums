@@ -166,7 +166,7 @@ Before starting the installation, ensure you have the following installed on you
 }
 ```
 
-## ⚙️ Project Setup & Configuration
+## Project Setup & Configuration
 
 1. **Environment Setup**
    ```bash
@@ -182,7 +182,7 @@ Before starting the installation, ensure you have the following installed on you
    - Configure color variables in `styles.scss`
    - Set up theme service
 
-## 🏃‍♂️ Running the Application
+## Running the Application
 
 1. **Development Server**
    ```bash

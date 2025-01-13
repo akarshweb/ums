@@ -10,7 +10,7 @@ import { PageSettingsModel } from '@syncfusion/ej2-angular-grids';
   standalone: true,
   imports: [GridModule, FormsModule],
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss'], 
+  styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent implements OnInit {
   users: any[] = []; // List of all users
@@ -25,6 +25,14 @@ export class UserListComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
+    // Initially hide the body content
+    document.body.style.visibility = 'hidden';
+
+    // Apply a delay to ensure data and components are fully loaded
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 25); // Adjust the delay as needed
+
     // Fetch all users and initialize the filtered list
     this.users = this.userService.getUsers();
     this.filteredUsers = [...this.users];

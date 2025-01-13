@@ -12,7 +12,7 @@
 9. [Running the Application](#running-the-application)
 10. [File Structure](#-file-structure)
 11. [Usage Guide](#-usage-guide)
-12. [Special Features](#-special-features)
+12. [Additional Features](#-additional-features)
 13. [Future Improvements](#-future-improvements)
 14. [Contributing](#-contributing)
 15. [License](#-license)
@@ -25,7 +25,7 @@ Here's a quick demonstration of the key features:
 
 
 ## 📋 Project Overview
-A comprehensive user management system built with Angular 19, featuring user creation, listing, and detail views with theme customization capabilities. The system provides an intuitive interface for managing user data with advanced features like searching, sorting, and responsive design.
+A comprehensive user management system built with Angular 19, featuring user creation, listing, and detail views with theme customization capabilities. The system provides an intuitive interface for managing user data with advanced features like searching and responsive design.
 
 ## 🚀 Features
 

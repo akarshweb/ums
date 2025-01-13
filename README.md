@@ -24,6 +24,10 @@ Here's a quick demonstration of the key features:
 
 
 
+https://github.com/user-attachments/assets/19a88414-2e44-450c-8323-034542f84411
+
+
+
 ## 📋 Project Overview
 A comprehensive user management system built with Angular 19, featuring user creation, listing, and detail views with theme customization capabilities. The system provides an intuitive interface for managing user data with advanced features like searching, sorting, and responsive design.
 

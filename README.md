@@ -22,7 +22,6 @@
 ## 🎥 Project Demo
 Here's a quick demonstration of the key features:
 
-<video controls src="UMS-Angular (11).mp4" title="Title"></video>
 
 
 ## 📋 Project Overview

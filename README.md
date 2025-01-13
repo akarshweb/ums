@@ -1,23 +1,24 @@
 # User Management System
 
 ## 📑 Table of Contents
-1. [Project Demo](#-project-demo)
-2. [Project Overview](#-project-overview)
-3. [Features](#-features)
-4. [Technologies Used](#-technologies-used)
-5. [Prerequisites](#-prerequisites)
-6. [Detailed Installation Guide](#-detailed-installation-guide)
-7. [Required Extensions & Packages](#-required-extensions--packages)
+1. [Project Demo](#project-demo)
+2. [Project Overview](#project-overview)
+3. [Features](#features)
+4. [Technologies Used](#technologies-used)
+5. [Prerequisites](#prerequisites)
+6. [Detailed Installation Guide](#detailed-installation-guide)
+7. [Required Extensions & Packages](#required-extensions--packages)
 8. [Project Setup & Configuration](#project-setup--configuration)
 9. [Running the Application](#running-the-application)
-10. [File Structure](#-file-structure)
-11. [Usage Guide](#-usage-guide)
-12. [Special Features](#-special-features)
-13. [Future Improvements](#-future-improvements)
-14. [Contributing](#-contributing)
-15. [License](#-license)
-16. [Authors](-#authors)
-17. [Acknowledgments](-#acknowledgments)
+10. [File Structure](#file-structure)
+11. [Usage Guide](#usage-guide)
+12. [Special Features](#special-features)
+13. [Future Improvements](#future-improvements)
+14. [Contributing](#contributing)
+15. [License](#license)
+16. [Authors](#authors)
+17. [Acknowledgments](#acknowledgments)
+
 
 ## 🎥 Project Demo
 Here's a quick demonstration of the key features:
@@ -323,11 +324,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Akarsh R - Initial work - [@akarshweb](https://github.com/akarshweb)
 
 
+
 ## 🙏 Acknowledgments
 
-Syncfusion for their excellent UI components
-Angular team for the fantastic framework
-The open-source community
+- Syncfusion for their excellent UI components
+- Angular team for the fantastic framework
+- The open-source community
+
 
 
 Note: This project is part of a learning initiative and is continuously being improved. Feedback and contributions are welcome!

@@ -29,7 +29,6 @@
         background-color: var(--background-color);
         color: var(--text-color);
         box-sizing: border-box;
-        transition: all 0.3s ease-in-out;
       }
 
       input::placeholder,
@@ -60,7 +59,6 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s;
 
       &:hover {
         background-color: var(--accent-color);
@@ -82,21 +80,8 @@
     -webkit-text-fill-color: var(--text-color) !important;
     -webkit-box-shadow: 0 0 0 1000px var(--background-color) inset !important;
     caret-color: var(--text-color) !important;
-    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s !important;
     color: var(--text-color) !important;
     box-shadow: 0 0 0 1000px var(--background-color) inset !important;
-  }
-
-  /* Additional Animation Delay */
-  input {
-    animation-delay: 1s;
-    transition: all 0.3s ease-in-out !important;
-  }
-
-  /* Force color application after autofill */
-  input:not(:focus):not(:placeholder-shown) {
-    color: var(--text-color) !important;
-    -webkit-text-fill-color: var(--text-color) !important;
   }
 
   /* DatePicker Specific Styles */

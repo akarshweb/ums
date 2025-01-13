@@ -18,7 +18,6 @@ body {
   background-color: var(--background-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 
@@ -43,7 +42,6 @@ body {
 
   .e-menu-item {
     background-color: inherit !important;
-    transition: background-color 0.3s ease !important;
 
     .e-menu-text {
       color: var(--text-color) !important;
@@ -64,9 +62,9 @@ body {
       }
 
       &:hover {
-        background-color: var(--accent-color) !important; /* Accent color on hover */
+        background-color: var(--accent-color) !important;
         .e-menu-text {
-          color: white !important; /* Text remains white */
+          color: white !important;
         }
       }
     }
@@ -74,9 +72,9 @@ body {
     /* Light theme specific styles */
     :host-context(body.light-theme) & {
       &:hover {
-        background-color: var(--accent-color) !important; /* Accent color on hover */
+        background-color: var(--accent-color) !important;
         .e-menu-text {
-          color: white !important; /* Text remains white */
+          color: white !important;
         }
       }
     }
@@ -100,7 +98,6 @@ body {
   padding: 20px;
   overflow-y: auto;
   background-color: var(--background-color);
-  transition: margin-left 0.3s ease-in-out;
 }
 
 .content-container.shifted {
@@ -118,7 +115,6 @@ body {
   border-radius: 4px;
   padding: 6px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: grey;
@@ -141,13 +137,11 @@ body {
   border-radius: 4px;
   padding: 3px 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: rgb(121, 42, 166);
   }
 }
-
 
 // Vertical Menu specific styles
 :host ::ng-deep .vertical-menu {
@@ -157,4 +151,3 @@ body {
     background-color: inherit;
   }
 }
-

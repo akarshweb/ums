@@ -24,6 +24,15 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
     // Fetch the list of users from the UserService
     this.users = this.userService.getUsers();
+
+      // Initially hide content during page load
+      document.body.style.visibility = 'hidden';
+
+      // Apply a delay (500ms) to give time for everything to load before showing the content
+      setTimeout(() => {
+        document.body.style.visibility = 'visible';  // Make body visible after content is fully loaded
+      }, 10);  // Adjust this delay if necessary
+
   }
 
   onRowSelected(event: any) {

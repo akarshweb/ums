@@ -1,7 +1,7 @@
 /* Light Theme Variables */
 body.light-theme {
   --primary-color: #8837c6;
-  --accent-color: #b38cd8;
+  --accent-color: #ca54c0;
   --background-color: #ffffff;
   --text-color: #333333;
   --border-color: #dee2e6;
@@ -10,7 +10,6 @@ body.light-theme {
   --grid-border-color: #ddd;
   --grid-hover-color: #e7f1ff;
   --grid-even-row-color: #c05e5e;
-
 }
 
 /* Dark Theme Variables */
@@ -20,7 +19,7 @@ body.dark-theme {
   --background-color: #212529;
   --text-color: #f8f9fa;
   --border-color: #495057;
-  --menu-background: #2a2d31; // Add this new variable
+  --menu-background: #2a2d31;
   --grid-background: #2c3034;
   --grid-text-color: #f8f9fa;
   --grid-border-color: #495057;
@@ -35,7 +34,4 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
 }
-
-

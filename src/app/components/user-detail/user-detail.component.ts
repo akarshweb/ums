@@ -64,6 +64,13 @@ export class UserDetailComponent implements OnInit {
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.user = this.userService.getUserById(id);
+      // Initially hide content during page load
+      document.body.style.visibility = 'hidden';
+
+      // Apply a delay (500ms) to give time for everything to load before showing the content
+      setTimeout(() => {
+        document.body.style.visibility = 'visible';  // Make body visible after content is fully loaded
+      }, 1);  // Adjust this delay if necessary
   }
 
   toggleShowMore() {

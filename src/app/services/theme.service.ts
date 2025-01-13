@@ -36,14 +36,7 @@ export class ThemeService {
 
   public applyTheme(): void {
     const isDark = this._isDarkTheme.value;
-    const body = document.body;
-
-    if (isDark) {
-      body.classList.add('dark-theme');
-      body.classList.remove('light-theme');
-    } else {
-      body.classList.add('light-theme');
-      body.classList.remove('dark-theme');
-    }
+    document.body.classList.remove(isDark ? 'light-theme' : 'dark-theme');
+    document.body.classList.add(isDark ? 'dark-theme' : 'light-theme');
   }
 }

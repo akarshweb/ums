@@ -8,16 +8,16 @@
 5. [Prerequisites](#-prerequisites)
 6. [Detailed Installation Guide](#-detailed-installation-guide)
 7. [Required Extensions & Packages](#-required-extensions--packages)
-8. [Project Setup & Configuration](#-project-setup--configuration)
-9. [Running the Application](#-running-the-application)
+8. [Project Setup & Configuration](#project-setup--configuration)
+9. [Running the Application](#running-the-application)
 10. [File Structure](#-file-structure)
 11. [Usage Guide](#-usage-guide)
 12. [Special Features](#-special-features)
 13. [Future Improvements](#-future-improvements)
 14. [Contributing](#-contributing)
 15. [License](#-license)
-16. [Authors](#authors)
-17. [Acknowledgments](#acknowledgments)
+16. [Authors](-#authors)
+17. [Acknowledgments](-#acknowledgments)
 
 ## 🎥 Project Demo
 Here's a quick demonstration of the key features:

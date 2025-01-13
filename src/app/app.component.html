@@ -1,4 +1,5 @@
 <div class="app-layout">
+  <!-- Sidebar menu -->
   <div class="menu-container" [class.hidden]="!menuVisible">
     <ejs-menu
       [items]="menuItems"
@@ -7,20 +8,27 @@
       cssClass="vertical-menu">
     </ejs-menu>
     <div class="theme-toggle-container">
-      <button class="theme-toggle-btn" (click)="themeService.toggleTheme()">
+      <!-- Button to toggle between light and dark theme -->
+      <button
+        class="theme-toggle-btn"
+        (click)="themeService.toggleTheme()"
+        aria-label="Toggle Theme">
         💡
       </button>
     </div>
   </div>
 
+  <!-- Menu toggle button -->
   <button
     class="menu-toggle-btn"
     (click)="toggleMenu()"
-    [style.left]="getToggleButtonLeftPosition()">
+    [style.left]="getToggleButtonLeftPosition()"
+    aria-label="Toggle Menu">
     ☰
   </button>
 
+  <!-- Content area for routed components -->
   <div class="content-container" [class.shifted]="menuVisible">
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> <!-- Displays routed components -->
   </div>
 </div>

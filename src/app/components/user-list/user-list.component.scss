@@ -15,43 +15,41 @@
     margin-bottom: 50px;
   }
 
+  // Deep styling for the grid component
   ::ng-deep {
     .e-grid {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
+      width: 100%;  // Ensure grid takes full width
+      max-width: 1200px;  // Limit max width for better readability
+      margin: 0 auto;  // Center the grid horizontally
       border-radius: 1px;
-      overflow: hidden;
+      overflow: hidden;  // Prevent overflow from the grid
       background-color: var(--grid-background);
       border: 2px solid var(--grid-border-color);
 
-      // Remove any internal white padding or border in the header
+      // Style for the grid header
       .e-gridheader {
         background-color: var(--grid-background);
         border-bottom: 1px solid var(--grid-border-color);
       }
 
-      // Grid rows and cells
+      // Style for grid rows and cells
       .e-rowcell,
       .e-columnheader .e-headercelldiv {
         background-color: var(--grid-background);
         color: var(--grid-text-color);
-        border: 500px;
-        padding: 10px;
-        text-align: center;
-
-
+        border: 500px;  // No border for cells (to be adjusted)
+        padding: 10px;  // Cell padding for better readability
+        text-align: center;  // Center the text inside cells
       }
 
-      // Target the content container of cells
+      // Content container for cells (removes unnecessary padding)
       .e-rowcell > div,
       .e-headercelldiv {
-        background-color: var(--grid-background) !important;
-        padding: 5px !important;
+        background-color: var(--grid-background) !important;  // Force grid background
+        padding: 5px !important;  // Force padding adjustment
       }
 
-
-      // Target the cell content specifically
+      // Style for content in grid cells (force background color)
       .e-gridcontent .e-content .e-row td.e-rowcell {
         background-color: var(--grid-background) !important;
       }
@@ -60,17 +58,18 @@
 
 }
 
-
-/* In your component's CSS file */
+// Header cell styling (this part is outside of ::ng-deep for better specificity)
 .e-headercell {
-  background-color: var(--grid-background);
-}
-::ng-deep .e-gridheader {
-  border-top: none !important; /* Removes the border at the top of the header */
-  box-shadow: none !important; /* Ensures no shadow is applied to the header */
+  background-color: var(--grid-background);  // Ensures consistent background for header cells
 }
 
+// Removing unnecessary borders and shadows from the header
 ::ng-deep .e-gridheader {
-  border-bottom: 2px solid var(--grid-border-color) !important; /* Increase thickness of the bottom border */
+  border-top: none !important;  // Remove top border for grid header
+  box-shadow: none !important;  // Remove box-shadow for cleaner header appearance
 }
 
+// Modify the grid header to have a thicker bottom border
+::ng-deep .e-gridheader {
+  border-bottom: 2px solid var(--grid-border-color) !important;  // Thicker bottom border
+}

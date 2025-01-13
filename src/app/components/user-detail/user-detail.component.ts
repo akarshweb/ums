@@ -1,4 +1,3 @@
-// user-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -12,6 +11,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss'],
   animations: [
+    // Animation for expanding and collapsing additional information
     trigger('detailExpand', [
       state('collapsed', style({
         height: '0',
@@ -20,11 +20,12 @@ import { UserService } from '../../services/user.service';
         overflow: 'hidden'
       })),
       state('expanded', style({
-        height: '*',
+        height: '*',  // Allow full height when expanded
         opacity: '1',
         transform: 'translateY(0)'
       })),
       transition('collapsed => expanded', [
+        // Animation for expanding the section
         animate('400ms cubic-bezier(0.4, 0.0, 0.2, 1)', keyframes([
           style({ height: 0, opacity: 0, transform: 'translateY(-10px)', offset: 0 }),
           style({ height: '*', opacity: 0.5, transform: 'translateY(-5px)', offset: 0.5 }),
@@ -32,6 +33,7 @@ import { UserService } from '../../services/user.service';
         ]))
       ]),
       transition('expanded => collapsed', [
+        // Animation for collapsing the section
         animate('400ms cubic-bezier(0.4, 0.0, 0.2, 1)', keyframes([
           style({ height: '*', opacity: 1, transform: 'translateY(0)', offset: 0 }),
           style({ height: '*', opacity: 0.5, transform: 'translateY(-5px)', offset: 0.5 }),
@@ -39,42 +41,45 @@ import { UserService } from '../../services/user.service';
         ]))
       ])
     ]),
-    // Add a ripple animation for the button
+    // Animation for button ripple effect
     trigger('buttonRipple', [
       transition('* => *', [
         animate('300ms ease', keyframes([
-          style({ transform: 'scale(1)', offset: 0 }),
-          style({ transform: 'scale(0.95)', offset: 0.5 }),
-          style({ transform: 'scale(1)', offset: 1 })
+          style({ transform: 'scale(1)', offset: 0 }),  // Initial scale
+          style({ transform: 'scale(0.95)', offset: 0.5 }),  // Scale down
+          style({ transform: 'scale(1)', offset: 1 })  // Scale back to original
         ]))
       ])
     ])
   ]
 })
 export class UserDetailComponent implements OnInit {
-  user: any;
-  showMore = false;
-  buttonClicked = false; // For button animation
+  user: any;  // User details object
+  showMore = false;  // Flag to toggle additional information visibility
+  buttonClicked = false;  // Flag for button ripple animation
 
   constructor(
-    private route: ActivatedRoute,
-    private userService: UserService
+    private route: ActivatedRoute,  // To access route parameters
+    private userService: UserService  // Service to fetch user details
   ) {}
 
   ngOnInit() {
+    // Get user ID from route parameter and fetch user details
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.user = this.userService.getUserById(id);
-      // Initially hide content during page load
-      document.body.style.visibility = 'hidden';
 
-      // Apply a delay (500ms) to give time for everything to load before showing the content
-      setTimeout(() => {
-        document.body.style.visibility = 'visible';  // Make body visible after content is fully loaded
-      }, 1);  // Adjust this delay if necessary
+    // Initially hide content during page load for better visual experience
+    document.body.style.visibility = 'hidden';
+
+    // Apply a delay to ensure content is fully loaded before making the page visible
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 1);  // Adjust the delay if necessary
   }
 
+  // Toggle function for expanding and collapsing additional user info
   toggleShowMore() {
     this.showMore = !this.showMore;
-    this.buttonClicked = !this.buttonClicked; // Toggle for button animation
+    this.buttonClicked = !this.buttonClicked;  // Trigger button animation
   }
 }

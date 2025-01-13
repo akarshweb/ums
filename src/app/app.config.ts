@@ -5,10 +5,10 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    // Configures routing with the application's routes
+    // Configures Angular's router with the application's defined routes
     provideRouter(routes),
 
-    // Enables browser animations
+    // Enables Angular's animations system, allowing animations throughout the app
     provideAnimations(),
   ],
 };

@@ -1,6 +1,11 @@
 <div class="user-list">
+
+  <!-- Title for the User List -->
   <h2>User List</h2>
+
+  <!-- Syncfusion Grid component to display users -->
   <ejs-grid [dataSource]="users" [allowPaging]="true" [pageSettings]="pageSettings" (rowSelected)="onRowSelected($event)">
+    <!-- Define columns for the user data -->
     <e-columns>
       <e-column field="name" headerText="Name" width="150"></e-column>
       <e-column field="address" headerText="Address" width="200"></e-column>

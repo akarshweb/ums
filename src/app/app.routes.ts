@@ -4,10 +4,11 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { UserCreateComponent } from './components/user-create/user-create.component';
 
+// Define the application's routing paths
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'user-list', component: UserListComponent },
-  { path: 'user-detail/:id', component: UserDetailComponent },
-  { path: 'user-create', component: UserCreateComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },  // Redirect root to '/home'
+  { path: 'home', component: HomeComponent },           // Route for Home component
+  { path: 'user-list', component: UserListComponent },  // Route for User List component
+  { path: 'user-detail/:id', component: UserDetailComponent }, // Route for User Detail, with dynamic 'id' parameter
+  { path: 'user-create', component: UserCreateComponent } // Route for User Create component
 ];

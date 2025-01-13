@@ -1,37 +1,37 @@
-/* Light Theme Variables */
+/* Light Theme Variables: Define color scheme and other styles for light theme */
 body.light-theme {
-  --primary-color: #8837c6;
-  --accent-color: #ca54c0;
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --border-color: #dee2e6;
-  --grid-background: #ffffff;
-  --grid-text-color: #8837c6;
-  --grid-border-color: #ddd;
-  --grid-hover-color: #e7f1ff;
-  --grid-even-row-color: #c05e5e;
+  --primary-color: #8837c6; /* Primary color for light theme */
+  --accent-color: #ca54c0;  /* Accent color for buttons, highlights */
+  --background-color: #ffffff;  /* Background color for light theme */
+  --text-color: #333333;        /* Text color for light theme */
+  --border-color: #dee2e6;      /* Border color for elements */
+  --grid-background: #ffffff;   /* Background color for grid */
+  --grid-text-color: #8837c6;   /* Text color for grid */
+  --grid-border-color: #ddd;    /* Border color for grid */
+  --grid-hover-color: #e7f1ff;  /* Hover color for grid rows */
+  --grid-even-row-color: #c05e5e;  /* Color for even rows in grid */
 }
 
-/* Dark Theme Variables */
+/* Dark Theme Variables: Define color scheme and other styles for dark theme */
 body.dark-theme {
-  --primary-color: #bb7ee7;
-  --accent-color: #495057;
-  --background-color: #212529;
-  --text-color: #f8f9fa;
-  --border-color: #495057;
-  --menu-background: #2a2d31;
-  --grid-background: #2c3034;
-  --grid-text-color: #f8f9fa;
-  --grid-border-color: #495057;
-  --grid-hover-color: #3a3f44;
-  --grid-even-row-color: #343a40;
+  --primary-color: #bb7ee7; /* Primary color for dark theme */
+  --accent-color: #495057;  /* Accent color for buttons, highlights */
+  --background-color: #212529;  /* Background color for dark theme */
+  --text-color: #f8f9fa;        /* Text color for dark theme */
+  --border-color: #495057;      /* Border color for elements */
+  --menu-background: #2a2d31;   /* Background color for menu */
+  --grid-background: #2c3034;   /* Background color for grid */
+  --grid-text-color: #f8f9fa;   /* Text color for grid */
+  --grid-border-color: #495057; /* Border color for grid */
+  --grid-hover-color: #3a3f44;  /* Hover color for grid rows */
+  --grid-even-row-color: #343a40; /* Color for even rows in grid */
 }
 
-/* Global Body Styles */
+/* Global Body Styles: Set common font and background settings */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: 'Roboto', sans-serif; /* Set font for entire app */
+  background-color: var(--background-color);  /* Background color based on theme */
+  color: var(--text-color); /* Text color based on theme */
 }

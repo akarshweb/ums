@@ -1,40 +1,47 @@
+/* Global styles for the app layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Layout for the entire application */
 .app-layout {
-  display: flex;
-  height: 100vh;
+  display: flex; /* Flexbox layout for horizontal arrangement */
+  height: 100vh; /* Full height of the viewport */
 }
 
+/* Sidebar menu container */
 .menu-container {
-  position: fixed;
+  position: fixed; /* Fixed positioning to stay on the left */
   top: 0;
   left: 0;
-  height: 100%;
-  width: 120px;
+  height: 100%; /* Full height */
+  width: 120px; /* Sidebar width */
   background-color: var(--background-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  z-index: 999; /* Ensure it stays above other elements */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Arrange children vertically */
 
+  /* Dark theme specific styles */
   :host-context(body.dark-theme) & {
     background-color: #2a2d31;
   }
 
+  /* Syncfusion menu wrapper styles */
   .e-menu-wrapper {
-    flex: 1;
+    flex: 1; /* Allow it to take up available space */
     background-color: inherit;
 
+    /* Dark theme */
     :host-context(body.dark-theme) & {
       background-color: inherit;
     }
   }
 }
 
+/* Menu item styles */
 :host ::ng-deep .e-menu-wrapper {
   .e-menu {
     background-color: inherit;
@@ -52,60 +59,30 @@ body {
       background-color: var(--accent-color) !important;
       cursor: pointer;
     }
-
-    /* Dark theme specific styles */
-    :host-context(body.dark-theme) & {
-      background-color: inherit !important;
-
-      .e-menu-text {
-        color: white !important;
-      }
-
-      &:hover {
-        background-color: var(--accent-color) !important;
-        .e-menu-text {
-          color: white !important;
-        }
-      }
-    }
-
-    /* Light theme specific styles */
-    :host-context(body.light-theme) & {
-      &:hover {
-        background-color: var(--accent-color) !important;
-        .e-menu-text {
-          color: white !important;
-        }
-      }
-    }
   }
 }
 
-:host ::ng-deep .e-menu-item.e-focused {
-  background-color: var(--accent-color) !important;
-
-  .e-menu-text {
-    color: white !important;
-  }
-}
-
+/* Sidebar hidden styles (when menu is toggled off) */
 .menu-container.hidden {
-  transform: translateX(-120px);
+  transform: translateX(-120px); /* Slide sidebar off-screen */
 }
 
+/* Content container styles */
 .content-container {
-  flex: 1;
+  flex: 1; /* Take up available space */
   padding: 20px;
   overflow-y: auto;
   background-color: var(--background-color);
 }
 
+/* When the menu is visible, shift the content to the right */
 .content-container.shifted {
-  margin-left: 120px;
+  margin-left: 120px; /* Offset content to the right */
 }
 
+/* Button to toggle the visibility of the menu */
 .menu-toggle-btn {
-  position: fixed;
+  position: fixed; /* Fixed at the top-left corner */
   top: 10px;
   left: 10px;
   z-index: 1000;
@@ -116,11 +93,13 @@ body {
   padding: 6px 12px;
   cursor: pointer;
 
+  /* Hover effect for the button */
   &:hover {
     background-color: grey;
   }
 }
 
+/* Container for the theme toggle button at the bottom */
 .theme-toggle-container {
   position: absolute;
   bottom: 20px;
@@ -129,6 +108,7 @@ body {
   text-align: center;
 }
 
+/* Theme toggle button styles */
 .theme-toggle-btn {
   background: white;
   font-size: 1.5rem;
@@ -138,16 +118,8 @@ body {
   padding: 3px 6px;
   cursor: pointer;
 
+  /* Hover effect for theme button */
   &:hover {
     background-color: rgb(121, 42, 166);
-  }
-}
-
-// Vertical Menu specific styles
-:host ::ng-deep .vertical-menu {
-  width: 100%;
-
-  .e-menu-container {
-    background-color: inherit;
   }
 }

@@ -11,11 +11,11 @@
 
   .user-form {
     .form-group {
-      margin-bottom: 50px;
+      margin-bottom: 50px;  /* Adds space between form groups */
 
       label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 5px;  /* Adds space between label and input */
       }
 
       input,
@@ -24,23 +24,11 @@
         width: 100%;
         height: 50px;
         padding: 10px;
-        border: 3px solid var(--border-color);
+        border: 3px solid var(--border-color); /* Sets the border color */
         border-radius: 8px;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        box-sizing: border-box;
-      }
-
-      input::placeholder,
-      ejs-datepicker input::placeholder {
-        color: var(--text-color);
-        opacity: 0.6;
-      }
-
-      input:focus,
-      ejs-datepicker input:focus {
-        outline: none;
-        border-color: var(--primary-color);
+        background-color: var(--background-color); /* Background color of input fields */
+        color: var(--text-color);     /* Text color inside input fields */
+        box-sizing: border-box;      /* Includes padding and border in element’s total width/height */
       }
 
       .error-message {
@@ -77,11 +65,11 @@
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active,
   input:autofill {
-    -webkit-text-fill-color: var(--text-color) !important;
-    -webkit-box-shadow: 0 0 0 1000px var(--background-color) inset !important;
-    caret-color: var(--text-color) !important;
-    color: var(--text-color) !important;
-    box-shadow: 0 0 0 1000px var(--background-color) inset !important;
+    -webkit-text-fill-color: var(--text-color) !important; /* Ensures autofilled text color matches */
+    -webkit-box-shadow: 0 0 0 1000px var(--background-color) inset !important; /* Fixes autofill box shadow */
+    caret-color: var(--text-color) !important; /* Sets the caret color to match text */
+    color: var(--text-color) !important; /* Fixes text color when autofilled */
+    box-shadow: 0 0 0 1000px var(--background-color) inset !important; /* Box shadow fix */
   }
 
   /* DatePicker Specific Styles */
@@ -90,32 +78,23 @@
     background-color: var(--background-color);
     border: 4px solid var(--border-color);
     border-radius: 4px;
-    overflow: hidden;
+    overflow: hidden;              /* Ensures no overflow */
 
     .e-input-group {
-      background-color: var(--background-color);
-      color: var(--text-color);
+      background-color: var(--background-color); /* Sets background color for input group */
+      color: var(--text-color);                   /* Text color inside input group */
       border: none;
       border-radius: 4px;
       padding: 0;
-      width: 100%;
+      width: 100%;                               
     }
 
-    .e-input-group input {
-      background-color: transparent;
-      color: inherit;
-      border: none;
-      width: calc(100% - 30px);
-      box-shadow: none;
-    }
+
 
     .e-input-group .e-input-group-icon {
-      background-color: transparent;
-      color: inherit;
+      background-color: transparent;           /* Transparent background for the icon */
+      color: inherit;                           /* Inherits text color */
     }
 
-    .e-float-input {
-      background-color: transparent;
-    }
   }
 }

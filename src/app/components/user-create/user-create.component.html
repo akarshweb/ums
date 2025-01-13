@@ -1,8 +1,14 @@
 <div class="user-create">
+  <!-- Header for the form -->
   <h2>Create User</h2>
+
+  <!-- Form with ngForm directive, ngSubmit event binding -->
   <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="user-form">
+
+    <!-- Name input field -->
     <div class="form-group">
       <label for="name">Name</label>
+      <!-- Input field for the user's name, bound to the 'name' property with ngModel -->
       <input
         type="text"
         id="name"
@@ -13,7 +19,9 @@
         maxlength="30"
         pattern="^[a-zA-Z ]+$"
         #nameModel="ngModel"
-      />
+      /> <!-- Properly self-closed input tag -->
+
+      <!-- Error messages for invalid 'name' field -->
       <div *ngIf="nameModel.invalid && (nameModel.dirty || nameModel.touched)" class="error-message">
         <p *ngIf="nameModel.errors?.['required']">Name is required</p>
         <p *ngIf="nameModel.errors?.['minlength']">Name must be at least 3 characters long</p>
@@ -21,8 +29,10 @@
       </div>
     </div>
 
+    <!-- Address input field -->
     <div class="form-group">
       <label for="address">Address</label>
+      <!-- Input field for the user's address, bound to the 'address' property with ngModel -->
       <input
         type="text"
         id="address"
@@ -32,21 +42,28 @@
         minlength="10"
         maxlength="40"
         #addressModel="ngModel"
-      />
+      /> <!-- Properly self-closed input tag -->
+
+      <!-- Error messages for invalid 'address' field -->
       <div *ngIf="addressModel.invalid && (addressModel.dirty || addressModel.touched)" class="error-message">
         <p *ngIf="addressModel.errors?.['required']">Address is required</p>
         <p *ngIf="addressModel.errors?.['minlength']">Address must be at least 10 characters long</p>
       </div>
     </div>
 
+    <!-- Date of Birth input field using ejs-datepicker component -->
     <div class="form-group">
       <label for="dob">Date of Birth</label>
+      <!-- ejs-datepicker component to select a date, bound to the 'dob' property with ngModel -->
       <ejs-datepicker [(ngModel)]="dob" name="dob" #dobModel="ngModel" [placeholder]="" [floatLabelType]="'Auto'"></ejs-datepicker>
+
+      <!-- Error message for invalid 'dob' field -->
       <div *ngIf="dobModel.invalid && (dobModel.dirty || dobModel.touched)" class="error-message">
         <p *ngIf="dobModel.errors?.['required']">Date of Birth is required</p>
       </div>
     </div>
 
+    <!-- Submit button, disabled if the form is invalid -->
     <button type="submit" [disabled]="userForm.invalid">Submit</button>
   </form>
 </div>

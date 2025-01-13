@@ -1,12 +1,16 @@
-<!-- user-detail.component.html -->
 <div class="user-detail" *ngIf="user">
+
+  <!-- Card containing user info -->
   <div class="card">
+
+    <!-- Section displaying basic user information -->
     <div class="user-info">
       <h2>User Details</h2>
       <p><strong>ID:</strong> {{user.id}}</p>
       <p><strong>Name:</strong> {{user.name}}</p>
     </div>
 
+    <!-- Section displaying additional user information (Address, DOB) -->
     <div [@detailExpand]="showMore ? 'expanded' : 'collapsed'" class="additional-info">
       <div class="info-content">
         <p><strong>Address:</strong> {{user.address}}</p>
@@ -16,9 +20,8 @@
 
     <button
       (click)="toggleShowMore()"
-      [@buttonRipple]="buttonClicked"
       class="toggle-button">
-      {{ showMore ? 'Show Less' : 'Show More' }}
+      {{ showMore ? 'Show Less' : 'Show More' }} <!-- Display dynamic text based on 'showMore' -->
     </button>
-  </div>
+    </div>
 </div>

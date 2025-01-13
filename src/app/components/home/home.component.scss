@@ -4,22 +4,22 @@
 
   h1 {
     font-size: 34px;
-    color: var(--primary-color);
+    color: var(--primary-color);  //
   }
 
   .theme-toggle {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 20px;  // Adds spacing between the button and the header
+    padding: 10px 20px;  
     background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    transition: background-color 0.3s, color 0.3s;
 
     &:hover {
-      background-color: var(--accent-color); /* Ensure hover background color is visible */
-      color: var(--text-color); /* Ensure text is always readable */
+      background-color: var(--accent-color);
+      color: var(--text-color);
     }
   }
 }

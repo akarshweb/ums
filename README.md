@@ -22,8 +22,7 @@
 ## 🎥 Project Demo
 Here's a quick demonstration of the key features:
 
-<video controls src="https://raw.githubusercontent.com/akarshweb/ums/main/UMS-Angular.mp4" title="UMS Angular Demo"></video>
-
+<video controls src="UMS-Angular.mp4" title="Title"></video>
 
 
 ## 📋 Project Overview
